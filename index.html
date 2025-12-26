@@ -1,95 +1,82 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ご提案のご案内｜ホテル明山荘</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご提案のご案内｜ホテル明山荘</title>
 
-  <style>
-   body {
+<style>
+body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #f28c28; /* ORANGE */
+  background-color: #f28c28;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-    .container {
+.container {
   max-width: 420px;
   width: 100%;
   padding: 40px 22px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.12);
   border-radius: 20px;
   backdrop-filter: blur(6px);
 }
 
-    .logo {
-      max-width: 160px;
-      margin: 10px auto 32px;
-    }
+.logo {
+  max-width: 160px;
+  margin: 10px auto 32px;
+}
 
-    h1 {
-      font-size: 22px;
-      letter-spacing: 1px;
-      margin-bottom: 14px;
-      color: #ffffff;
-    }
+h1 {
+  font-size: 22px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
 
-    .subtitle {
-      font-size: 14px;
-      line-height: 1.9;
-      color: #d0d0d0;
-      margin-bottom: 38px;
-    }
+.subtitle {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #ffffff;
+  margin-bottom: 38px;
+}
 
-    .btn {
-      display: block;
-      padding: 17px;
-      margin: 14px 0;
-      font-size: 15px;
-      font-weight: 500;
-      text-decoration: none;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #1e5fd8, #1545a5);
-      color: #ffffff;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.45);
-    }
+.btn {
+  display: block;
+  padding: 17px;
+  margin: 14px 0;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e5fd8, #1545a5);
+  color: #ffffff;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.35);
+}
 
-    .btn:hover {
-      opacity: 0.92;
-    }
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,0.25);
+  margin: 36px 0;
+}
 
-    .divider {
-      height: 1px;
-      background: rgba(255,255,255,0.15);
-      margin: 38px 0;
-    }
-
-    .footer {
-      font-size: 11px;
-      color: #8a8a8a;
-      margin-top: 42px;
-      line-height: 1.7;
-    }
-
-    .social {
+.social {
   display: flex;
   justify-content: center;
   gap: 18px;
-  margin-top: 35px;
+  margin-bottom: 22px;
 }
 
 .social a {
   width: 36px;
   height: 36px;
+  background: #ffffff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.9);
 }
 
 .social img {
@@ -97,73 +84,45 @@
   height: 20px;
 }
 
-  </style>
+.footer {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #ffffff;
+}
+</style>
 </head>
 
 <body>
-<div class="social">
-  <a href="https://line.me/R/ti/p/XXXXXXXX" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/line.svg">
-  </a>
 
-  <a href="https://www.instagram.com/meizanso/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
-  </a>
+<div class="container">
 
-  <a href="https://www.facebook.com/meizanso/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg">
-  </a>
-</div>
+  <!-- LOGO -->
+  <img src="logo.png?v=2" alt="ホテル明山荘 ロゴ" class="logo">
 
-  <div class="container">
+  <h1>ホテル明山荘</h1>
 
-    <!-- LOGO -->
-    <img src="logo.png?v=2" alt="ホテル明山荘 ロゴ" class="logo">
+  <p class="subtitle">
+    この度はご多忙の中、誠にありがとうございます。<br>
+    下記より各種ご提案内容をご確認ください。
+  </p>
 
-    <!-- HOTEL NAME -->
-    <h1>ホテル明山荘</h1>
+  <!-- BUTTONS -->
+  <a class="btn" href="https://www.meizanso.com/" target="_blank">ホームページ</a>
+  <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/08/mainpanf_202508.pdf">パンフレット</a>
+  <a class="btn" href="https://www.meizanso.com/plan/plan_group">日帰り昼食プラン</a>
+  <a class="btn" href="https://www.meizanso.com/plan/plan_group">宿泊プラン</a>
+  <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/12/MICE%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf">MICEパンフレット</a>
+  <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/09/%E5%AE%A2%E5%AE%A4%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85.pdf">平面図</a>
 
-    <!-- MESSAGE -->
-    <p class="subtitle">
-      この度はご多忙の中、誠にありがとうございます。<br>
-      下記より各種ご提案内容をご確認ください。
-    </p>
+  <div class="divider"></div>
 
-    <!-- 6 BUTTONS -->
-    <a class="btn" href="https://www.meizanso.com/" target="_blank">
-      ホームページ
+  <!-- SNS -->
+  <div class="social">
+    <a href="https://line.me/R/ti/p/XXXXXXXX" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/line.svg">
     </a>
-
-    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/08/mainpanf_202508.pdf">
-      パンフレット
+    <a href="https://www.instagram.com/meizanso/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
     </a>
-
-    <a class="btn" href="https://www.meizanso.com/plan/plan_group">
-      日帰り昼食プラン
-    </a>
-
-    <a class="btn" href="https://www.meizanso.com/plan/plan_group">
-      宿泊プラン
-    </a>
-
-    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/12/MICE%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf">
-      MICEパンフレット
-    </a>
-
-    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/09/%E5%AE%A2%E5%AE%A4%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85.pdf">
-      平面図
-    </a>
-
-    <div class="divider"></div>
-
-   <div style="margin-top: 20px; font-size: 13px; line-height: 1.7; color: #ffffff;">
-  三河湾国定公園・三谷温泉<br>
-  <strong>ホテル明山荘</strong><br>
-  〒443-0021 愛知県蒲郡市三谷町鳶欠14-1<br>
-  TEL.0533-68-4641／FAX.0533-68-3870
-</div>
-
-  </div>
-
-</body>
-</html>
+    <a href="https://www.facebook.com/meizanso/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/fac
