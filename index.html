@@ -9,8 +9,8 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 
-  /* ✅ ONLY IMAGE (no dark overlay) */
-  background-image: url("background.jpg"); /* ← FIX THIS PATH */
+  /* ✅ FIXED BACKGROUND */
+  background-image: url("background-image.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* 🔥 GRID (3 per row) */
+/* grid (3 per row) */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -53,6 +53,11 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 /* image */
@@ -72,26 +77,34 @@ body {
   font-size: 13px;
 }
 
-/* hover */
-.card:hover {
-  transform: translateY(-3px);
-  transition: 0.2s;
-}
-
-/* mobile (1 column) */
+/* mobile */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* social */
+/* social icons */
 .social {
   margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
 }
 
 .social a {
-  margin: 0 8px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social img {
+  width: 20px;
+  height: 20px;
 }
 
 /* footer */
@@ -113,7 +126,6 @@ body {
     下記より各種ご提案内容をご確認ください。
   </p>
 
-  <!-- 🔥 GRID START -->
   <div class="grid">
 
     <div class="card">
@@ -123,36 +135,42 @@ body {
 
     <div class="card">
       <img src="pamphlet.JPG">
-      <a class="btn" href="#">パンフレット</a>
+      <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/08/mainpanf_202508.pdf" target="_blank">パンフレット</a>
     </div>
 
     <div class="card">
       <img src="stay.JPG">
-      <a class="btn" href="#">団体宿泊プラン</a>
+      <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2026/01/8%E5%90%8D%E6%A7%98%E4%BB%A5%E4%B8%8A%E5%9B%A3%E4%BD%93%E5%AE%BF%E6%B3%8A%E3%83%97%E3%83%A9%E3%83%B3-1.pdf" target="_blank">団体宿泊プラン</a>
     </div>
 
     <div class="card">
       <img src="lunch.JPG">
-      <a class="btn" href="#">団体昼食プラン</a>
+      <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2026/01/15%E5%90%8D%E6%A7%98%E4%BB%A5%E4%B8%8A%E5%9B%A3%E4%BD%93%E5%90%91%E3%81%91%E3%81%94%E6%98%BC%E9%A3%9F%E3%83%97%E3%83%A9%E3%83%B3.png" target="_blank">団体昼食プラン</a>
     </div>
 
     <div class="card">
       <img src="mice.JPG">
-      <a class="btn" href="#">MICE</a>
+      <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/12/MICE%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf" target="_blank">MICEパンフレット</a>
     </div>
 
     <div class="card">
       <img src="floormap.JPG">
-      <a class="btn" href="#">平面図</a>
+      <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/09/%E5%AE%A2%E5%AE%A4%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85.pdf" target="_blank">平面図</a>
     </div>
 
   </div>
-  <!-- 🔥 GRID END -->
 
+  <!-- ✅ SOCIAL ICONS FIXED -->
   <div class="social">
-    <a href="https://page.line.me/meizanso">LINE</a>
-    <a href="https://www.instagram.com/meizanso/">Instagram</a>
-    <a href="https://www.facebook.com/meizanso/">Facebook</a>
+    <a href="https://page.line.me/meizanso" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/line.svg">
+    </a>
+    <a href="https://www.instagram.com/meizanso/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg">
+    </a>
+    <a href="https://www.facebook.com/meizanso/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg">
+    </a>
   </div>
 
   <div class="footer">
