@@ -8,97 +8,110 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f28c28;
   min-height: 100vh;
+
+  /* 🌄 BACKGROUND IMAGE */
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("background.jpg"); /* ← change if needed */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Main container */
 .container {
   max-width: 420px;
-  width: 100%;
-  padding: 40px 22px;
-  text-align: center;
+  width: 90%;
+  padding: 30px 20px;
+
   background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+
   border-radius: 20px;
+  text-align: center;
 }
 
+/* Logo */
 .logo {
-  max-width: 160px;
-  margin: 10px auto 28px;
+  max-width: 150px;
+  margin: 10px auto 20px;
 }
 
-h1 {
-  font-size: 22px;
-  color: #ffffff;
-  margin-bottom: 14px;
-}
-
+/* Text */
 .subtitle {
   font-size: 14px;
   line-height: 1.8;
   color: #ffffff;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
-.btn {
-  position: relative;
-  display: block;
-  padding: 16px;
-  margin: 14px 0;
-  font-size: 15px;
-  text-decoration: none;
-  border-radius: 12px;
-  background: #1e5fd8;
-  color: #ffffff;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+/* Card (image + button) */
+.card {
+  margin-bottom: 18px;
+  border-radius: 14px;
   overflow: hidden;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Image */
+.card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+
+/* Button */
+.btn {
+  display: block;
+  margin: 10px;
+  padding: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+
+  background: linear-gradient(135deg, #1e5fd8, #3a7bff);
+  color: white;
+
+  box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+  transition: 0.25s;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
 }
 
-.btn:active {
-  transform: translateY(0);
-}
-
-.btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -60%;
-  width: 50%;
-  height: 100%;
-  background: rgba(255,255,255,0.25);
-  transform: skewX(-20deg);
-}
-
-.btn:hover::after {
-  left: 120%;
-  transition: left 0.6s ease;
-}
-
+/* Divider */
 .divider {
   height: 1px;
-  background: rgba(255,255,255,0.25);
-  margin: 32px 0;
+  background: rgba(255,255,255,0.3);
+  margin: 25px 0;
 }
 
+/* Social */
 .social {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 16px;
   margin-bottom: 20px;
 }
 
 .social a {
   width: 36px;
   height: 36px;
-  background: #ffffff;
+  background: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -106,14 +119,18 @@ h1 {
 }
 
 .social img {
-  width: 20px;
-  height: 20px;
+  width: 18px;
 }
 
+/* Footer */
 .footer {
-  font-size: 13px;
+  font-size: 12px;
+  color: white;
   line-height: 1.7;
-  color: #ffffff;
+}
+
+.footer a {
+  color: white;
 }
 </style>
 </head>
@@ -122,25 +139,52 @@ h1 {
 
 <div class="container">
 
-  <img src="logo.png?v=2" alt="ホテル明山荘 ロゴ" class="logo">
+  <img src="logo.png?v=2" class="logo">
 
   <p class="subtitle">
     この度はご多忙の中、誠にありがとうございます。<br>
     下記より各種ご提案内容をご確認ください。
   </p>
 
-  <a class="btn" href="https://www.meizanso.com/" target="_blank">ホームページ</a>
-  <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/08/mainpanf_202508.pdf" target="_blank">パンフレット</a>
-  <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2026/01/8%E5%90%8D%E6%A7%98%E4%BB%A5%E4%B8%8A%E5%9B%A3%E4%BD%93%E5%AE%BF%E6%B3%8A%E3%83%97%E3%83%A9%E3%83%B3-1.pdf" target="_blank">8名様以上団体宿泊プラン</a>
-  <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2026/01/15%E5%90%8D%E6%A7%98%E4%BB%A5%E4%B8%8A%E5%9B%A3%E4%BD%93%E5%90%91%E3%81%91%E3%81%94%E6%98%BC%E9%A3%9F%E3%83%97%E3%83%A9%E3%83%B3.png"target="_blank">15名様以上団体向けご昼食プラン</a>
-  <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/12/MICE%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf" target="_blank">MICEパンフレット</a>
-  <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/09/%E5%AE%A2%E5%AE%A4%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85.pdf" target="_blank">平面図</a>
-  <a class="btn" href="proposal.pdf?v=1" target="_blank" rel="noopener noreferrer">
-  提案書
-</a>
+  <!-- 🏨 Home -->
+  <div class="card">
+    <img src="home.JPG" class="card-img">
+    <a class="btn" href="https://www.meizanso.com/" target="_blank">ホームページ</a>
+  </div>
+
+  <!-- 📄 Pamphlet -->
+  <div class="card">
+    <img src="pamphlet.JPG" class="card-img">
+    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/08/mainpanf_202508.pdf" target="_blank">パンフレット</a>
+  </div>
+
+  <!-- 🛏 Stay -->
+  <div class="card">
+    <img src="stay.JPG" class="card-img">
+    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2026/01/8%E5%90%8D%E6%A7%98%E4%BB%A5%E4%B8%8A%E5%9B%A3%E4%BD%93%E5%AE%BF%E6%B3%8A%E3%83%97%E3%83%A9%E3%83%B3-1.pdf" target="_blank">団体宿泊プラン</a>
+  </div>
+
+  <!-- 🍱 Lunch -->
+  <div class="card">
+    <img src="lunch.JPG" class="card-img">
+    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2026/01/15%E5%90%8D%E6%A7%98%E4%BB%A5%E4%B8%8A%E5%9B%A3%E4%BD%93%E5%90%91%E3%81%91%E3%81%94%E6%98%BC%E9%A3%9F%E3%83%97%E3%83%A9%E3%83%B3.png" target="_blank">団体昼食プラン</a>
+  </div>
+
+  <!-- 🎤 MICE -->
+  <div class="card">
+    <img src="mice.JPG" class="card-img">
+    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/12/MICE%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf" target="_blank">MICEパンフレット</a>
+  </div>
+
+  <!-- 🗺 Floor -->
+  <div class="card">
+    <img src="floormap.JPG" class="card-img">
+    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/09/%E5%AE%A2%E5%AE%A4%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85.pdf" target="_blank">平面図</a>
+  </div>
 
   <div class="divider"></div>
 
+  <!-- Social -->
   <div class="social">
     <a href="https://page.line.me/meizanso" target="_blank">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/line.svg">
@@ -153,12 +197,12 @@ h1 {
     </a>
   </div>
 
+  <!-- Footer -->
   <div class="footer">
     三河湾国定公園・三谷温泉<br>
     <strong>ホテル明山荘</strong><br>
     〒443-0021 愛知県蒲郡市三谷町鳶欠14-1<br>
-    TEL.<a href="tel:0533684641" style="color:#ffffff;">0533-68-4641</a> /
-    FAX.0533-68-3870
+    TEL.<a href="tel:0533684641">0533-68-4641</a>
   </div>
 
 </div>
