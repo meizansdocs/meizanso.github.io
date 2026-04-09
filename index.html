@@ -8,129 +8,96 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
 
-  /* 🌄 BACKGROUND IMAGE */
-  background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url("background.jpg"); /* ← change if needed */
-
+  /* ✅ ONLY IMAGE (no dark overlay) */
+  background-image: url("background.jpg"); /* ← FIX THIS PATH */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-attachment: fixed;
 }
 
-/* Main container */
+/* container */
 .container {
-  max-width: 420px;
-  width: 90%;
-  padding: 30px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
 
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(12px);
-
+  background: rgba(255,255,255,0.85);
   border-radius: 20px;
   text-align: center;
 }
 
-/* Logo */
+/* logo */
 .logo {
   max-width: 150px;
-  margin: 10px auto 20px;
-}
-
-/* Text */
-.subtitle {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #ffffff;
-  margin-bottom: 25px;
-}
-
-/* Card (image + button) */
-.card {
-  margin-bottom: 18px;
-  border-radius: 14px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.08);
-}
-
-/* Image */
-.card-img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.card:hover .card-img {
-  transform: scale(1.05);
-}
-
-/* Button */
-.btn {
-  display: block;
-  margin: 10px;
-  padding: 14px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 14px;
-
-  background: linear-gradient(135deg, #1e5fd8, #3a7bff);
-  color: white;
-
-  box-shadow: 0 5px 12px rgba(0,0,0,0.4);
-  transition: 0.25s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
-}
-
-/* Divider */
-.divider {
-  height: 1px;
-  background: rgba(255,255,255,0.3);
-  margin: 25px 0;
-}
-
-/* Social */
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
   margin-bottom: 20px;
 }
 
-.social a {
-  width: 36px;
-  height: 36px;
+/* text */
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* 🔥 GRID (3 per row) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* card */
+.card {
   background: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.social img {
-  width: 18px;
+/* image */
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
 }
 
-/* Footer */
+/* button */
+.btn {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  background: #1e5fd8;
+  color: white;
+  font-size: 13px;
+}
+
+/* hover */
+.card:hover {
+  transform: translateY(-3px);
+  transition: 0.2s;
+}
+
+/* mobile (1 column) */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* social */
+.social {
+  margin-top: 25px;
+}
+
+.social a {
+  margin: 0 8px;
+}
+
+/* footer */
 .footer {
+  margin-top: 15px;
   font-size: 12px;
-  color: white;
-  line-height: 1.7;
-}
-
-.footer a {
-  color: white;
 }
 </style>
 </head>
@@ -146,63 +113,51 @@ body {
     下記より各種ご提案内容をご確認ください。
   </p>
 
-  <!-- 🏨 Home -->
-  <div class="card">
-    <img src="home.JPG" class="card-img">
-    <a class="btn" href="https://www.meizanso.com/" target="_blank">ホームページ</a>
+  <!-- 🔥 GRID START -->
+  <div class="grid">
+
+    <div class="card">
+      <img src="home.JPG">
+      <a class="btn" href="https://www.meizanso.com/" target="_blank">ホームページ</a>
+    </div>
+
+    <div class="card">
+      <img src="pamphlet.JPG">
+      <a class="btn" href="#">パンフレット</a>
+    </div>
+
+    <div class="card">
+      <img src="stay.JPG">
+      <a class="btn" href="#">団体宿泊プラン</a>
+    </div>
+
+    <div class="card">
+      <img src="lunch.JPG">
+      <a class="btn" href="#">団体昼食プラン</a>
+    </div>
+
+    <div class="card">
+      <img src="mice.JPG">
+      <a class="btn" href="#">MICE</a>
+    </div>
+
+    <div class="card">
+      <img src="floormap.JPG">
+      <a class="btn" href="#">平面図</a>
+    </div>
+
   </div>
+  <!-- 🔥 GRID END -->
 
-  <!-- 📄 Pamphlet -->
-  <div class="card">
-    <img src="pamphlet.JPG" class="card-img">
-    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/08/mainpanf_202508.pdf" target="_blank">パンフレット</a>
-  </div>
-
-  <!-- 🛏 Stay -->
-  <div class="card">
-    <img src="stay.JPG" class="card-img">
-    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2026/01/8%E5%90%8D%E6%A7%98%E4%BB%A5%E4%B8%8A%E5%9B%A3%E4%BD%93%E5%AE%BF%E6%B3%8A%E3%83%97%E3%83%A9%E3%83%B3-1.pdf" target="_blank">団体宿泊プラン</a>
-  </div>
-
-  <!-- 🍱 Lunch -->
-  <div class="card">
-    <img src="lunch.JPG" class="card-img">
-    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2026/01/15%E5%90%8D%E6%A7%98%E4%BB%A5%E4%B8%8A%E5%9B%A3%E4%BD%93%E5%90%91%E3%81%91%E3%81%94%E6%98%BC%E9%A3%9F%E3%83%97%E3%83%A9%E3%83%B3.png" target="_blank">団体昼食プラン</a>
-  </div>
-
-  <!-- 🎤 MICE -->
-  <div class="card">
-    <img src="mice.JPG" class="card-img">
-    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/12/MICE%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf" target="_blank">MICEパンフレット</a>
-  </div>
-
-  <!-- 🗺 Floor -->
-  <div class="card">
-    <img src="floormap.JPG" class="card-img">
-    <a class="btn" href="https://www.meizanso.com/mwp/wp-content/uploads/2025/09/%E5%AE%A2%E5%AE%A4%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85.pdf" target="_blank">平面図</a>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- Social -->
   <div class="social">
-    <a href="https://page.line.me/meizanso" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/line.svg">
-    </a>
-    <a href="https://www.instagram.com/meizanso/" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
-    </a>
-    <a href="https://www.facebook.com/meizanso/" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg">
-    </a>
+    <a href="https://page.line.me/meizanso">LINE</a>
+    <a href="https://www.instagram.com/meizanso/">Instagram</a>
+    <a href="https://www.facebook.com/meizanso/">Facebook</a>
   </div>
 
-  <!-- Footer -->
   <div class="footer">
-    三河湾国定公園・三谷温泉<br>
-    <strong>ホテル明山荘</strong><br>
-    〒443-0021 愛知県蒲郡市三谷町鳶欠14-1<br>
-    TEL.<a href="tel:0533684641">0533-68-4641</a>
+    ホテル明山荘<br>
+    TEL: 0533-68-4641
   </div>
 
 </div>
